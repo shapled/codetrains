@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type SetCount map[rune]int8
 
 func NewSet() *SetCount {
@@ -76,12 +74,6 @@ func isScramble(s1 string, s2 string) bool {
 		}
 	}
 	return false
-}
-
-func assertEqual(a, b interface{}) {
-	if a != b {
-		panic(fmt.Sprintf("%#v != %#v", a, b))
-	}
 }
 
 func main() {
