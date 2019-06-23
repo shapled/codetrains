@@ -69,3 +69,14 @@ func assertIntSliceEqual(a, b []int) {
 		}
 	}
 }
+
+func assertStringSliceEqual(a, b []string) {
+	if len(a) != len(b) {
+		panic(fmt.Sprintf("%#v != %#v", a, b))
+	}
+	for i, v := range a {
+		if v != b[i] {
+			panic(fmt.Sprintf("%#v != %#v", a, b))
+		}
+	}
+}
