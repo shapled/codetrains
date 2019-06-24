@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 type TreeNode struct {
 	Val int
@@ -79,4 +82,10 @@ func assertStringSliceEqual(a, b []string) {
 			panic(fmt.Sprintf("%#v != %#v", a, b))
 		}
 	}
+}
+
+func assertStringSliceSetEqual(a, b []string) {
+	sort.Strings(a)
+	sort.Strings(b)
+	assertStringSliceEqual(a, b)
 }
